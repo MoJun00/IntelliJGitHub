@@ -30,6 +30,7 @@ public class App {
             String answer = sc.next();
             if(answer.equalsIgnoreCase("exit"))
                 break;
+
         }
     }
 }
