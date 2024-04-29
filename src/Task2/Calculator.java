@@ -3,8 +3,16 @@ package Task2;
 import java.util.ArrayList;
 
 public class Calculator {
+    public ArrayList<Double> getArrayResults() {
+        return arrayResults;
+    }
+
+    public void setArrayResults(ArrayList<Double> arrayResults) {
+        this.arrayResults = arrayResults;
+    }
+
     /* 연산 결과를 저장하는 컬렉션 타입 필드 선언 및 생성 */
-    ArrayList<Double> arrayResults = new ArrayList<Double>();
+    private ArrayList<Double> arrayResults = new ArrayList<Double>();
 
     public double calculate(double a, double b, char operator) {
         /* 위 요구사항에 맞게 구현 */

@@ -20,6 +20,7 @@ public class App {
 
             try {
                 calculator.calculate(num1,num2,operator);
+
             } catch (Exception e) {
                 System.out.println("에러 발생!!");
                 System.out.println(e.getMessage());
