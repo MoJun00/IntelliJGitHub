@@ -9,6 +9,7 @@ public class Calculator {
     Calculator()
     {
         arrayResults.clear();
+        arrayCA.clear();
     }
 
     public ArrayList<Double> getArrayResults() {
@@ -57,4 +58,30 @@ public class Calculator {
 
         return c;
     }
+
+
+    private static ArrayList<Double> arrayCA = new ArrayList<Double>();
+    //Calculator 클래스를 여러개 만들어도 저장 값을 한 곳에 통일하기 위함 (클래스 처음 만들 때만 초기화 중)
+    /* 원의 넓이를 구하는 메서드 선언*/
+    public double calculateCircleArea(double radius) {
+        /* 원의 넓이 계산 구현 */
+        return 3.14*radius*radius;
+    }
+    /* 원의 넓이 저장 필드 Getter, Setter, 조회 메서드 구현 */
+    public ArrayList<Double> getarrayCA() {
+        return arrayCA;
+    }
+
+    public void setarrayCA(double n) {
+        arrayCA.add(n);
+    }
+
+    public void Print_arrayCA() {
+        int i=0;
+        for (double result : arrayCA) {
+            System.out.println("Result " + (i+1) + " : " + result);
+            i++;
+        }
+    }
+
 }
