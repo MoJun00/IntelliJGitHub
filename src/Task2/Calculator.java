@@ -17,11 +17,14 @@ public class Calculator {
         if (arrayResults.size() > 0)
             arrayResults.remove(0);
     }
-    /*
-    public void setArrayResults(ArrayList<Double> arrayResults) {
-        this.arrayResults = arrayResults;
+    public void inquiryResults() {
+        int i=0;
+        for (double result : arrayResults) {
+            System.out.println("Result " + (i+1) + " : " + result);
+            i++;
+        }
     }
-     */
+
 
     public double calculate(double a, double b, char operator) {
         double c=0;
