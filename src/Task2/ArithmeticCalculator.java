@@ -2,24 +2,26 @@ package Task2;
 
 public class ArithmeticCalculator extends Calculator {
 
+    ArithmeticCalculator() {}
     public double calculate(double a, double b, char operator) {
         double c=0;
+        AddOperator addOperator = new AddOperator();
+        SubtractOperator subtractOperator = new SubtractOperator();
+        MultiplyOperator multiplyOperator = new MultiplyOperator();
+        DivideOperator divideOperator = new DivideOperator();
+
 
         if (operator == '+') {
-            c=a+b;
+            c=addOperator.operate(a,b);
         }
         else if (operator == '-') {
-            c=a-b;
+            c=subtractOperator.operate(a,b);
         }
         else if (operator == '*') {
-            c=a*b;
+            c=multiplyOperator.operate(a,b);
         }
         else if (operator == '/') {
-            if(b==0)
-                throw new RuntimeException("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
-            //throw new ArithmeticException("Division by zero");
-
-            c=a/b;
+            c=divideOperator.operate(a,b);
         }
         else
         {
