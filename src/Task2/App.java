@@ -5,7 +5,8 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        Calculator calculator = new Calculator();
+        ArithmeticCalculator calculator = new ArithmeticCalculator();
+        CircleCalculator circleCalculator = new CircleCalculator();
 
         Scanner sc = new Scanner(System.in);
 
@@ -52,14 +53,14 @@ public class App {
                 System.out.print("반지름을 입력하세요 : ");
                 double num1 = sc.nextDouble();
 
-                double ac = calculator.calculateCircleArea(num1);
-                calculator.setarrayCA(ac);
+                double ac = circleCalculator.calculate(num1);
+                circleCalculator.setArrayResults(ac);
 
                 String answer;
                 System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
                 answer = sc.next();
                 if(answer.equalsIgnoreCase("inquiry")) {
-                    calculator.Print_arrayCA();
+                    circleCalculator.inquiryResults();
                 }
 
                 System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
