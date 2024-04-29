@@ -6,6 +6,11 @@ public class Calculator {
     /* 연산 결과를 저장하는 컬렉션 타입 필드 선언 및 생성 */
     private ArrayList<Double> arrayResults = new ArrayList<Double>();
 
+    Calculator()
+    {
+        arrayResults.clear();
+    }
+
     public ArrayList<Double> getArrayResults() {
         return arrayResults;
     }
