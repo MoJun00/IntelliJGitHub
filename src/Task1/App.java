@@ -40,14 +40,24 @@ public class App {
             arrayResults.add(result);
 
             System.out.println("가장 먼저 저장된 연산 결과를 삭제하시겠습니까? (remove 입력 시 삭제)");
-            String answer1 = sc.next();
-            if(answer1.equalsIgnoreCase("remove"))
+            String answer = sc.next();
+            if(answer.equalsIgnoreCase("remove"))
                 arrayResults.remove(0);
+
+            System.out.println("저장된 연산결과를 조회하시겠습니까? (inquiry 입력 시 조회)");
+            answer = sc.next();
+            if(answer.equalsIgnoreCase("inquiry")) {
+                System.out.println("-- 저장된 연산 결과 --");
+                for (double num : arrayResults) {
+                    System.out.print(num + " ");
+                }
+                System.out.println();
+            }
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
             /* exit을 입력 받으면 반복 종료 */
-            String answer2 = sc.next();
-            if(answer2.equalsIgnoreCase("exit"))
+            answer = sc.next();
+            if(answer.equalsIgnoreCase("exit"))
                 break;
         }
     }
