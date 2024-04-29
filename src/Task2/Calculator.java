@@ -3,6 +3,9 @@ package Task2;
 import java.util.ArrayList;
 
 public class Calculator {
+    /* 연산 결과를 저장하는 컬렉션 타입 필드 선언 및 생성 */
+    private ArrayList<Double> arrayResults = new ArrayList<Double>();
+
     public ArrayList<Double> getArrayResults() {
         return arrayResults;
     }
@@ -10,14 +13,15 @@ public class Calculator {
     public void setArrayResults(double n) {
         arrayResults.add(n);
     }
+    public void removeResult() {
+        if (arrayResults.size() > 0)
+            arrayResults.remove(0);
+    }
     /*
     public void setArrayResults(ArrayList<Double> arrayResults) {
         this.arrayResults = arrayResults;
     }
      */
-
-    /* 연산 결과를 저장하는 컬렉션 타입 필드 선언 및 생성 */
-    private ArrayList<Double> arrayResults = new ArrayList<Double>();
 
     public double calculate(double a, double b, char operator) {
         double c=0;
