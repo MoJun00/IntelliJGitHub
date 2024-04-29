@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        ArithmeticCalculator calculator = new ArithmeticCalculator();
+        ArithmeticCalculator calculator = new ArithmeticCalculator(new AddOperator());
         CircleCalculator circleCalculator = new CircleCalculator();
 
         Scanner sc = new Scanner(System.in);

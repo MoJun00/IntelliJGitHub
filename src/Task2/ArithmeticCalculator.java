@@ -2,31 +2,39 @@ package Task2;
 
 public class ArithmeticCalculator extends Calculator {
 
-    ArithmeticCalculator() {}
+    AbstractOperation operation;
+    ArithmeticCalculator(AbstractOperation abstractOperation) {
+        operation = abstractOperation;
+    }
+
+    public void setOperation(AbstractOperation operation) {
+        this.operation = operation;
+    }
+
     public double calculate(double a, double b, char operator) {
         double c=0;
-        AddOperator addOperator = new AddOperator();
-        SubtractOperator subtractOperator = new SubtractOperator();
-        MultiplyOperator multiplyOperator = new MultiplyOperator();
-        DivideOperator divideOperator = new DivideOperator();
-
 
         if (operator == '+') {
-            c=addOperator.operate(a,b);
+            setOperation(new AddOperator());
         }
         else if (operator == '-') {
-            c=subtractOperator.operate(a,b);
+            setOperation(new SubtractOperator());
         }
         else if (operator == '*') {
-            c=multiplyOperator.operate(a,b);
+            setOperation(new MultiplyOperator());
         }
         else if (operator == '/') {
-            c=divideOperator.operate(a,b);
+            setOperation(new DivideOperator());
+        }
+        else if (operator == '%') {
+            setOperation(new ModOperator());
         }
         else
         {
             throw new RuntimeException("적합한 연산자 기호가 아닙니다.");
         }
+
+        c = operation.operate(a,b);
 
         return c;
     }

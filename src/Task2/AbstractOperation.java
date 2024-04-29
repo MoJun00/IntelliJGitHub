@@ -1,5 +1,5 @@
 package Task2;
 
 public abstract class AbstractOperation {
-    abstract double operate(int firstNumber, int secondNumber);
+    abstract double operate(double firstNumber, double secondNumber);
 }
