@@ -17,5 +17,23 @@ public class App {
         // 사칙연산 기호를 적합한 타입으로 선언한 변수에 저장합니다.
         String operation = sc.next();
 
+        double result = 0;
+        /* 제어문을 활용하여 위 요구사항을 만족할 수 있게 구현합니다.*/
+        if (operation.equals("+"))
+            result = firstNum + secondNum;
+        else if (operation.equals("-"))
+            result = firstNum - secondNum;
+        else if (operation.equals("*"))
+            result = firstNum * secondNum;
+        else if (operation.equals("/"))
+        {
+            if(secondNum == 0) {
+                System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
+                result = 0;
+            }
+            else
+                result = (double) firstNum / secondNum;
+        }
+        System.out.println("결과 : " + result);
     }
 }
