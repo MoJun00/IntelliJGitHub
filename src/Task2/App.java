@@ -19,8 +19,9 @@ public class App {
             char operator = sc.next().charAt(0);
 
             try {
-                calculator.calculate(num1,num2,operator);
+                double result = calculator.calculate(num1,num2,operator);
 
+                calculator.setArrayResults(result);
             } catch (Exception e) {
                 System.out.println("에러 발생!!");
                 System.out.println(e.getMessage());
