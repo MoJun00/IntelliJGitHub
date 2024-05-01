@@ -42,6 +42,9 @@ public class App {
                     calculator.inquiryResults();
                 }
 
+                System.out.println("숫자 n 보다 큰 결과값 출력 : ");
+                calculator.printGreaterResults(sc.nextInt());
+
                 System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
                 /* exit을 입력 받으면 반복 종료 */
                 answer = sc.next();

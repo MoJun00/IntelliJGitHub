@@ -5,7 +5,6 @@ public class ArithmeticCalculator extends Calculator {
         PLUS, MINUS, MULTIPLY, DIVIDE, MODULO
     }
 
-
     AbstractOperation operation;
     ArithmeticCalculator(AbstractOperation abstractOperation) {
         operation = abstractOperation;
@@ -60,5 +59,12 @@ public class ArithmeticCalculator extends Calculator {
         c = operation.operate(a,b);
 
         return c;
+    }
+
+    public void printGreaterResults(double n)
+    {
+        getArrayResults().stream().filter(num -> num > n).forEach(num -> {
+            System.out.println(num);
+        });
     }
 }
