@@ -1,4 +1,4 @@
-package Task1;
+package task1;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -8,7 +8,6 @@ public class App {
         Scanner sc = new Scanner(System.in);
 
         ArrayList<Double> arrayResults = new ArrayList<Double>();
-        int cnt = 0;
 
         while (true) {
             System.out.print("첫 번째 숫자를 입력하세요 : ");

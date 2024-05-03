@@ -1,4 +1,4 @@
-package Task2;
+package task3;
 
 public class DivideOperator extends AbstractOperation {
     public double operate(double a, double b) {

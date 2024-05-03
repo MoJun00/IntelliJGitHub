@@ -1,4 +1,4 @@
-package Task3;
+package task2;
 
 public class SubtractOperator extends AbstractOperation {
     public double operate(double a, double b) {

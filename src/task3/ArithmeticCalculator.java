@@ -1,4 +1,4 @@
-package Task3;
+package task3;
 
 public class ArithmeticCalculator extends Calculator {
     public enum OperatorType {
